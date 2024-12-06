@@ -12,7 +12,7 @@ public interface VideoService {
 
 	
 	  // save video
-	Video save(VideoService video, MultipartFile file);
+	Video save(Video video, MultipartFile file);
 	  
 	  // get video by id
 	  
