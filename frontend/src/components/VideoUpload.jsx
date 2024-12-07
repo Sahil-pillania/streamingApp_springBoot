@@ -103,7 +103,7 @@ function VideoUpload() {
 
   return (
     <div className="text-white">
-      <Card className="flex flex-col items-center justify-center">
+      <Card className="flex flex-col items-center justify-center bg-gray-900 py-4 px-5 rounded-xl ">
         <h1 className="text-3xl text-center my-4 underline">Upload Videos</h1>
 
         <div>
@@ -117,6 +117,7 @@ function VideoUpload() {
                 <Label htmlFor="file-upload" value="Video Title" />
               </div>
               <TextInput
+                style={{ backgroundColor: "#374151", padding: "0.2rem" }}
                 value={meta.title}
                 onChange={formFieldChange}
                 name="title"
@@ -129,6 +130,7 @@ function VideoUpload() {
                 <Label htmlFor="comment" value="Video Description" />
               </div>
               <Textarea
+                style={{ backgroundColor: "#374151", padding: "0.2rem"}}
                 value={meta.description}
                 onChange={formFieldChange}
                 name="description"
@@ -180,6 +182,7 @@ function VideoUpload() {
             <div className="">
               {message && (
                 <Alert
+                  className="rounded-xl bg-green-600 "
                   color={"success"}
                   rounded
                   withBorderAccent
@@ -194,7 +197,11 @@ function VideoUpload() {
             </div>
 
             <div className="flex justify-center">
-              <Button disabled={uploading} type="submit">
+              <Button
+                disabled={uploading}
+                className="bg-cyan-500 hover:bg-cyan-600 p-2 rounded"
+                type="submit"
+              >
                 Submit
               </Button>
             </div>
