@@ -4,7 +4,6 @@ import {
   Button,
   Card,
   Label,
-  FileInput,
   TextInput,
   Textarea,
   Progress,
@@ -130,7 +129,7 @@ function VideoUpload() {
                 <Label htmlFor="comment" value="Video Description" />
               </div>
               <Textarea
-                style={{ backgroundColor: "#374151", padding: "0.2rem"}}
+                style={{ backgroundColor: "#374151", padding: "0.2rem" }}
                 value={meta.description}
                 onChange={formFieldChange}
                 name="description"

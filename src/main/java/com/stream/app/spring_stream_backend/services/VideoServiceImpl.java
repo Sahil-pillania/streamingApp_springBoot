@@ -98,8 +98,10 @@ public class VideoServiceImpl implements VideoService {
 
 	@Override
 	public Video get(String videoId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Video video =  videoRepository.findById(videoId).orElseThrow(()-> new RuntimeException("Video not found"));
+		
+		return video;
 	}
 
 	@Override
@@ -110,8 +112,8 @@ public class VideoServiceImpl implements VideoService {
 
 	@Override
 	public List<Video> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return videoRepository.findAll();
 	}
 	
 	
