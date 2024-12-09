@@ -22,8 +22,8 @@ import org.springframework.web.multipart.MultipartFile;
 import com.stream.app.spring_stream_backend.entities.Video;
 import com.stream.app.spring_stream_backend.payload.CustomMessage;
 import com.stream.app.spring_stream_backend.services.VideoService;
-
-import jakarta.annotation.Resource;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 
 
 @RestController
@@ -92,7 +92,7 @@ public class VideoController {
 		String filePath =  video.getFilePath();
 		
 		
-		Resource resource = (Resource) new FileSystemResource(filePath);
+		Resource resource = new FileSystemResource(filePath);
 		
 		if(contentType == null) {
 			contentType = "application/octet-stream";
