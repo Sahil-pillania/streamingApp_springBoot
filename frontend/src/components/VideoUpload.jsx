@@ -165,9 +165,10 @@ function VideoUpload() {
               </label>
             </div>
 
-            <div className="">
+            <div className="h-full text-xs">
               {uploading && (
                 <Progress
+                  style={{ height: "27px" }}
                   color="green"
                   progress={progress}
                   textLabel="Uploading"
