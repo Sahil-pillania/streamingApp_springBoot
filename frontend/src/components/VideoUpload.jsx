@@ -94,7 +94,7 @@ function VideoUpload() {
       resetForm();
     } catch (error) {
       console.log(error);
-      setMessage("Error in uplaoding File");
+      setMessage("Errors in file uploading...");
       setUploading(false);
       toast.error("File not uploaded !!");
     }

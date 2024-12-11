@@ -15,7 +15,7 @@ function App() {
         </h1>
         <div className="flex w-full justify-around py-6 mt-14">
           <div>
-            <h1 className="text-white">Playing video</h1>
+            <h1 className="text-white text-xl font-bold">Video Player</h1>
             <video
               id="video"
               width={500}
